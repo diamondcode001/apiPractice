@@ -57,10 +57,10 @@ transition: all 350ms;
 transform: scale(1);
 
 :hover{
-    box-shadow: rgb(0 0 0 /69%) 0px 20px 30px -10px,
-     rgb(0 0 0 /73%) 0px 16px 10px -10px;
+    box-shadow: rgb(0 0 0 /19%) 0px 20px 30px -10px,
+     rgb(0 0 0 /43%) 0px 16px 10px -10px;
     cursor: pointer;
-    transform: scale(0.97);
+    transform: scale(0.96);
 }
 
 `;
@@ -75,8 +75,8 @@ const Container =styled.div`
 width: 100%;
 height: 100%;
 min-height: 100vh;
-background-color: lightblue;
 color: black;
+background-image: linear-gradient(#b6cba7,#fafafa);
 `;
 const Wrapper =styled.div`
 width: 100%;
@@ -85,5 +85,5 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: ;
-
 `;
+
