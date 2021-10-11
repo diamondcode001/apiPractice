@@ -89,7 +89,7 @@ height: 500px;
 object-fit: contain;
 position: absolute;
 top: 250px;
-left: -70px;
+left: -60px;
 transform: scale(1);
 
 :hover{
