@@ -1,18 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
+import img from '../asserts/food1.png'
 
  const Comp1 = () => {
     return (
         <Container>
             <Wrapper>
                 <Content>
-                    <Title>Healthy and Fresh Food For You</Title>
+                    <Title>Healthy & Fresh Food For You</Title>
                     <Desc>Created for lovers of healthy delicious food and non-obvious food</Desc>
                     <Button>Check Menu</Button>
                 </Content>
-                <ImageViwer>
-                    <Image/>
+               <ImageHolder>
+               <ImageViwer>
+                    <Image src={img}/>
                 </ImageViwer>
+               </ImageHolder>
             </Wrapper>
         </Container>
     )
@@ -20,8 +23,15 @@ import styled from 'styled-components'
 
 export default Comp1;
 
+const ImageHolder =styled.div`
+width: 100%;
+height: 100%;
+position: relativ;
+overflow: hidden;
+`;
 const Content =styled.div`
 width: 500px;
+height: 400px;
 display: flex;
 flex-direction: column;
 margin: 50px;
@@ -65,11 +75,26 @@ transform: scale(1);
 
 `;
 const ImageViwer =styled.div`
-width:400px;
-height: 400px;
-Background-color: green;
+width: 900px;
+height: 900px;
+Background-color: #397546;
+border-radius: 50%;
+position: absolute;
+right: -70px;
+top: -200px;
 `;
 const Image =styled.img`
+width: 500px;
+height: 500px;
+object-fit: contain;
+position: absolute;
+top: 250px;
+left: -70px;
+transform: scale(1);
+
+:hover{
+    transform: scale(0.93);
+}
 `;
 const Container =styled.div`
 width: 100%;
@@ -84,6 +109,5 @@ height: 600px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: ;
 `;
 

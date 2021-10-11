@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import vid from './provid.mp4'
 
 const VideoSection = () => {
-    const url = "provid.mp4"
+    
     return (
         <Container>
             <Wrapper>
@@ -27,7 +27,6 @@ height: 90%;
 min-height: 80vh;
 margin: 0 auto;
 object-fit: cover;
-
 `;
 const Container =styled.div`
 width: 100%;
