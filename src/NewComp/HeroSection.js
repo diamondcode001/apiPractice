@@ -17,7 +17,8 @@ const HeroSection = () => {
                     <Button>View CV</Button>
                     <Button>Button</Button>
                     </Div>
-                </BoxContent> <ImageMother>
+                </BoxContent>
+                 <ImageMother>
                     <ImageHolder><Image src= {img}/></ImageHolder>
                 </ImageMother>
             </Wrapper>
@@ -73,23 +74,19 @@ const ImageMother =styled.div`
 width: 500px;
 height: 500px;
 position: relative;
-right: -193px;
-background-color: blue;
-border-radius: 50% 0% 50% 50%;
-display: flex;
-justify-content: center;
-align-items: center;
+
 `;
 const ImageHolder =styled.div`
-width: 400px;
-height:400px;
+width: 450px;
+height: 450px;
+right: -150px;
+bottom: 40px;
 position: absolute;
 background-color: white;
 border-radius: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
-
 `;
 const Image =styled.img`
 width: 450px;
