@@ -8,7 +8,7 @@ const MovieFile = () => {
       <Container>
           <Wrapper>
             {data?.map((props,i)=>(
-              <Card key ={i} to={`/detail/${props}`}>
+              <Card key ={i} to={`/detail/${props.myId}`}>
               <Image src = {props.cardImg }/>
                 <Div/>
 
