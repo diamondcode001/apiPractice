@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
 import data from './data.json';
+import {Link} from 'react-router-dom'
 
 const MovieFile = () => {
     return (
       <Container>
           <Wrapper>
-            <Card>
-              <Image src = { "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/456A711C19899C881600F6247705E5253EB18C2471D75E5281E1FF6ACB6D2FBA/scale?width=1440&aspectRatio=1.78&format=jpeg"
-}/>
+            {data?.map((props,i)=>(
+              <Card key ={i} to={`/detail/${props}`}>
+              <Image src = {props.cardImg }/>
                 <Div/>
 
-              <Name>The falcon and the winter soldier</Name>
+              <Name>{props.title}</Name>
             </Card>
+            ))};
           </Wrapper>
       </Container>
     );
@@ -23,6 +25,7 @@ export default MovieFile;
 const Div =styled.div`
 width: 450px;
 height: 500px;
+border-radius: 10px;
 background-color: rgba(0, 0, 0, 0.5);
 position: absolute;
 left: 0;
@@ -31,10 +34,9 @@ top: 0;
 :hover{
   background-color: rgba(0, 0, 0, 0);
 }
-
-
 `;
-const Card =styled.div`
+
+const Card =styled(Link)`
 width: 450px;
 height: 500px;
 background-color: lightgray;
@@ -42,6 +44,7 @@ border-radius: 10px;
 position: relative;
 transition: all 350ms;
 transform: scale(1);
+margin: 10px;
 
 :hover{
   cursor: pointer;
@@ -61,6 +64,7 @@ flex-direction: column;
 justify-content: flex-end;
 align-items: center;
 margin: 0 10px;
+color: white;
 font-size: 20px;
 font-weight: 300;
 transition: all 350ms;

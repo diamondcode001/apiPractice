@@ -10,7 +10,7 @@ const ApiMain = () => {
             <ApiSum/>
             <Switch>
             <Route path='/HeaderFile' exact component = {HeaderFile}/>
-            <Route path='/MovieFile' exact component = {MovieFile}/>
+            <Route path='/details/:id' exact component = {MovieFile}/>
             </Switch>
         </Router>
     )

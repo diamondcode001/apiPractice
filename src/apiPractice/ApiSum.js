@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import HeaderFile from './HeaderFile';
 import MovieFile from './MovieFile';
+import MovieDetails from './MovieDetails';
 
 const ApiSum = () => {
     return (
@@ -9,6 +10,7 @@ const ApiSum = () => {
           <Wrapper>
               <HeaderFile/>
               <MovieFile/>
+              <MovieDetails/>
           </Wrapper>
       </Container>
     )
